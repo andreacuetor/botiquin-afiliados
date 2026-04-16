@@ -227,12 +227,12 @@ img { display: block; max-width: 100%; }
 .c-brown  .brand-header-left::before, .c-brown  .brand-accent { background: #4E342E; }
 .c-forest .brand-header-left::before, .c-forest .brand-accent { background: #1B5E20; }
 .c-blue   .brand-header-left::before, .c-blue   .brand-accent { background: #0D3B7A; }
-.c-purple .brand-header-left::before, .c-purple .brand-accent { background: #4A0E8F; }
-.c-teal   .brand-header-left::before, .c-teal   .brand-accent { background: #00514A; }
-.c-wine   .brand-header-left::before, .c-wine   .brand-accent { background: #6D0027; }
-.c-olive  .brand-header-left::before, .c-olive  .brand-accent { background: #2E5902; }
+.c-purple .brand-header-left::before, .c-purple .brand-accent { background: #3D1173; }
+.c-teal   .brand-header-left::before, .c-teal   .brand-accent { background: #005D6E; }
+.c-wine   .brand-header-left::before, .c-wine   .brand-accent { background: #5C0020; }
+.c-olive  .brand-header-left::before, .c-olive  .brand-accent { background: #7B1818; }
 .c-indigo .brand-header-left::before, .c-indigo .brand-accent { background: #1A237E; }
-.c-ember  .brand-header-left::before, .c-ember  .brand-accent { background: #BF360C; }
+.c-ember  .brand-header-left::before, .c-ember  .brand-accent { background: #1A3A6B; }
 
 .brand-eyebrow {
   font-family: 'Space Mono', monospace;
@@ -272,7 +272,7 @@ img { display: block; max-width: 100%; }
 .brand-img-slot {
   position: relative;
   overflow: hidden;
-  background: rgba(0,0,0,.25);
+  background: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -281,8 +281,9 @@ img { display: block; max-width: 100%; }
   width: 100%;
   height: 100%;
   object-fit: contain;
-  padding: 24px;
-  filter: drop-shadow(0 8px 24px rgba(0,0,0,.4));
+  padding: 20px;
+  mix-blend-mode: multiply;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,.15));
   transition: transform .3s ease;
 }
 .brand-img-slot img:hover { transform: scale(1.04); }
@@ -536,11 +537,25 @@ img { display: block; max-width: 100%; }
 @media print { .fab { display: none; } }
 
 .cover-logo { margin-bottom: 24px; }
-.cover-logo img { height: 56px; width: auto; }
+.cover-logo img { height: 72px; width: auto; }
 .intro-logo { margin-bottom: 28px; }
-.intro-logo img { height: 44px; width: auto; }
+.intro-logo img { height: 72px; width: auto; }
 .closing-logo { margin-bottom: 20px; }
-.closing-logo img { height: 52px; width: auto; opacity: .9; }
+.closing-logo img { height: 72px; width: auto; opacity: .9; }
+
+/* Per-brand image slot background — matches packaging */
+.c-red    .brand-img-slot { background: #FDF5F5; }
+.c-green  .brand-img-slot { background: #F2F9F3; }
+.c-orange .brand-img-slot { background: #FFF8F5; }
+.c-brown  .brand-img-slot { background: #FBF7F5; }
+.c-forest .brand-img-slot { background: #F3FAF4; }
+.c-blue   .brand-img-slot { background: #F2F6FC; }
+.c-purple .brand-img-slot { background: #F8F4FE; }
+.c-teal   .brand-img-slot { background: #F2FAFA; }
+.c-wine   .brand-img-slot { background: #FDF2F5; }
+.c-olive  .brand-img-slot { background: #FDF2F2; }
+.c-indigo .brand-img-slot { background: #F2F4FC; }
+.c-ember  .brand-img-slot { background: #F2F5FC; }
 </style>
 </head>
 <body>
@@ -574,7 +589,7 @@ img { display: block; max-width: 100%; }
 <div class="card intro">
   <div class="intro-logo">
     <!-- IMAGE FILE: logo.png (versión a color) -->
-    <img src="logo.png" alt="Mi Botiquín Latino" onerror="this.style.display='none'">
+    <img src="logo2.png" alt="Mi Botiquín Latino" onerror="this.style.display='none'">
   </div>
   <div class="section-eyebrow">Antes de empezar</div>
   <div class="section-title">Las reglas del juego</div>
@@ -584,7 +599,7 @@ img { display: block; max-width: 100%; }
     <div class="rule"><div class="rule-n">01</div><div><strong>Divulga siempre.</strong><span>Usa #ad o #publicidad en cada video patrocinado. Es ley, no opcional.</span></div></div>
     <div class="rule"><div class="rule-n">02</div><div><strong>Suplementos ≠ medicamentos.</strong><span>No diagnostican, tratan, curan ni previenen enfermedades. Los OTC tienen claims específicos — úsalos textualmente.</span></div></div>
     <div class="rule"><div class="rule-n">03</div><div><strong>Uso tradicional = tu escudo.</strong><span>Para herbales: "ha sido usado por generaciones para apoyar..." — nunca la afirmación directa.</span></div></div>
-    <div class="rule"><div class="rule-n">04</div><div><strong>OTC tiene más libertad.</strong><span>Parasitol, Polvos de Sulpha y La Vaca Mascura son OTC — puedes afirmar el beneficio de su etiqueta.</span></div></div>
+    <div class="rule"><div class="rule-n">04</div><div><strong>OTC tiene más libertad.</strong><span>Parasitol, Polvos de Sulpha y Pomada de la Vaca son OTC — puedes afirmar el beneficio de su etiqueta.</span></div></div>
     <div class="rule"><div class="rule-n">05</div><div><strong>Sin hashtags de enfermedad.</strong><span>Evita: #anemia #alzheimer #tiroides #cancer #covid — TikTok los detecta.</span></div></div>
     <div class="rule"><div class="rule-n">06</div><div><strong>Honestidad ante todo.</strong><span>Solo experiencias reales. No exageres resultados. Tu credibilidad vale más que una venta.</span></div></div>
   </div>
@@ -594,7 +609,7 @@ img { display: block; max-width: 100%; }
     <a href="#scotts" class="toc-link"><span class="toc-n">01</span><div class="toc-info"><div class="toc-name">Emulsión de Escocia</div><div class="toc-cat">Vitaminas infantiles</div></div></a>
     <a href="#apetol" class="toc-link"><span class="toc-n">02</span><div class="toc-info"><div class="toc-name">Apetol</div><div class="toc-cat">Apetito + vitaminas</div></div></a>
     <a href="#parasitol" class="toc-link"><span class="toc-n">03</span><div class="toc-info"><div class="toc-name">Parasitol</div><div class="toc-cat">OTC · Oxiuros</div></div></a>
-    <a href="#lavaca" class="toc-link"><span class="toc-n">04</span><div class="toc-info"><div class="toc-name">La Vaca Mascura</div><div class="toc-cat">OTC · Analgésico tópico</div></div></a>
+    <a href="#lavaca" class="toc-link"><span class="toc-n">04</span><div class="toc-info"><div class="toc-name">Pomada de la Vaca</div><div class="toc-cat">OTC · Analgésico tópico</div></div></a>
     <a href="#tchakowski" class="toc-link"><span class="toc-n">05</span><div class="toc-info"><div class="toc-name">Bálsamo Tchakowski</div><div class="toc-cat">Digestivo · Propóleo</div></div></a>
     <a href="#polvos" class="toc-link"><span class="toc-n">06</span><div class="toc-info"><div class="toc-name">Polvos de Sulpha</div><div class="toc-cat">OTC · Antibiótico tópico</div></div></a>
     <a href="#opal" class="toc-link"><span class="toc-n">07</span><div class="toc-info"><div class="toc-name">Opal Hand Sanitizer</div><div class="toc-cat">Cosmético · Aromaterapia</div></div></a>
@@ -602,7 +617,7 @@ img { display: block; max-width: 100%; }
     <a href="#vino" class="toc-link"><span class="toc-n">09</span><div class="toc-info"><div class="toc-name">Vino Carne y Hierro</div><div class="toc-cat">Hierro natural</div></div></a>
     <a href="#rabano" class="toc-link"><span class="toc-n">10</span><div class="toc-info"><div class="toc-name">Rábano Yodado</div><div class="toc-cat">Energía · Tiroides</div></div></a>
     <a href="#fitina" class="toc-link"><span class="toc-n">11</span><div class="toc-info"><div class="toc-name">Fitina</div><div class="toc-cat">Sistema nervioso</div></div></a>
-    <a href="#rutascorbin" class="toc-link"><span class="toc-n">12</span><div class="toc-info"><div class="toc-name">Rutascorbina</div><div class="toc-cat">Vitamina C + Rutina</div></div></a>
+    <a href="#rutascorbin" class="toc-link"><span class="toc-n">12</span><div class="toc-info"><div class="toc-name">Rutascorbin</div><div class="toc-cat">Vitamina C + Rutina</div></div></a>
   </div>
 </div>
 
@@ -846,23 +861,23 @@ img { display: block; max-width: 100%; }
       <div class="brand-eyebrow">Marca 04 · OTC / Cosmético</div>
       <div class="brand-name">La Vaca<em>Mascura</em></div>
       <div class="brand-tags">
-        <span class="brand-tag otc">OTC — La Vaca Mascura</span>
+        <span class="brand-tag otc">OTC — Pomada de la Vaca</span>
         <span class="brand-tag">Metil Salicilato 10.5%</span>
         <span class="brand-tag">Wintergreen · 3 oz</span>
       </div>
     </div>
     <div class="brand-img-slot">
-      <img src="lavaca.png" alt="La Vaca Mascura" onerror="this.style.display='none'">
-      <div class="img-placeholder"><div class="ph-icon">🐄</div><div class="ph-label">Sube tu imagen<br>como<br><strong>lavaca.png</strong></div></div>
+      <img src="pomada.png" alt="Pomada de la Vaca" onerror="this.style.display='none'">
+      <div class="img-placeholder"><div class="ph-icon">🐄</div><div class="ph-label">Sube tu imagen<br>como<br><strong>pomada.png</strong></div></div>
     </div>
   </div>
   <div class="brand-body">
     <div class="meta-strip">
       <div class="meta-cell"><div class="meta-label">Descripción</div><p>Ungüento analgésico tópico OTC para alivio temporal de dolores musculares y articulares. La Pomada de la Vaca (versión cosmética) no tiene claims terapéuticos.</p></div>
-      <div class="meta-cell"><div class="meta-label">Clasificación</div><p><strong>OTC</strong> — La Vaca Mascura / Plus<br><strong>Cosmético</strong> — Pomada de la Vaca</p></div>
+      <div class="meta-cell"><div class="meta-label">Clasificación</div><p><strong>OTC</strong> — Pomada de la Vaca / Plus<br><strong>Cosmético</strong> — Pomada de la Vaca</p></div>
       <div class="meta-cell"><div class="meta-label">Ingredientes</div><ul><li>Metil Salicilato 10.5% (OTC)</li><li>Mentol · Alcanfor</li><li>Aceite de Clavo · Menta</li></ul></div>
     </div>
-    <div class="warn"><div class="warn-icon">⚠️</div><div class="warn-text"><strong>OTC vs. Cosmético</strong><strong>La Vaca Mascura</strong> puede afirmar alivio de dolores musculares. <strong>Pomada de la Vaca (cosmética)</strong> NO puede hacer claims terapéuticos.</div></div>
+    <div class="warn"><div class="warn-icon">⚠️</div><div class="warn-text"><strong>OTC vs. Cosmético</strong><strong>Pomada de la Vaca</strong> puede afirmar alivio de dolores musculares. <strong>Pomada de la Vaca (cosmética)</strong> NO puede hacer claims terapéuticos.</div></div>
     <div class="sub-label"><div class="sl-bar" style="background:#3B82F6"></div><h3>Beneficios aprobados (OTC)</h3></div>
     <div class="benefits">
       <div class="benefit"><div class="benefit-title">Alivio temporal dolor muscular</div><div class="benefit-desc">Metil Salicilato 10.5% para alivio temporal de dolores musculares asociados a artritis simple, esguinces y dolor de espalda.</div></div>
@@ -887,7 +902,7 @@ img { display: block; max-width: 100%; }
     <div class="hr"></div>
     <div class="sub-label"><div class="sl-bar" style="background:var(--navy)"></div><h3>Copy listo para usar</h3></div>
     <div class="snippets">
-      <div class="snippet">Ese dolor muscular después de un largo día — La Vaca Mascura al rescate 🐄 Metil Salicilato OTC para el alivio temporal de dolores musculares y articulares. El clásico con aroma a Wintergreen. Disponible en Mi Botiquín Latino. #LaVacaMascura #ad</div>
+      <div class="snippet">Ese dolor muscular después de un largo día — Pomada de la Vaca al rescate 🐄 Metil Salicilato OTC para el alivio temporal de dolores musculares y articulares. El clásico con aroma a Wintergreen. Disponible en Mi Botiquín Latino. #LaVacaMascura #ad</div>
     </div>
     <div class="legal">OTC de uso externo. Solo en piel sana. Sigue instrucciones de la etiqueta.</div>
   </div>
@@ -1320,7 +1335,7 @@ img { display: block; max-width: 100%; }
   <div class="brand-header">
     <div class="brand-header-left">
       <div class="brand-eyebrow">Marca 12 · Suplemento Dietético</div>
-      <div class="brand-name">Rutascorbina</div>
+      <div class="brand-name">Rutascorbin</div>
       <div class="brand-tags">
         <span class="brand-tag">Vitamina C</span>
         <span class="brand-tag">Rutina (flavonoide)</span>
@@ -1328,17 +1343,17 @@ img { display: block; max-width: 100%; }
       </div>
     </div>
     <div class="brand-img-slot">
-      <img src="rutascorbin.png" alt="Rutascorbina" onerror="this.style.display='none'">
+      <img src="rutascorbin.png" alt="Rutascorbin" onerror="this.style.display='none'">
       <div class="img-placeholder"><div class="ph-icon">🍊</div><div class="ph-label">Sube tu imagen<br>como<br><strong>rutascorbin.png</strong></div></div>
     </div>
   </div>
   <div class="brand-body">
     <div class="meta-strip">
       <div class="meta-cell"><div class="meta-label">Descripción</div><p>Tabletas con Vitamina C y Rutina (flavonoide natural) para el apoyo del sistema capilar saludable (capilares sanguíneos). 50 tabletas.</p></div>
-      <div class="meta-cell"><div class="meta-label">Clasificación</div><p><strong>Suplemento Dietético</strong></p></div>
-      <div class="meta-cell"><div class="meta-label">Ingredientes</div><ul><li>Vitamina C (Ácido Ascórbico)</li><li>Rutina (Rutin — flavonoide)</li></ul></div>
+      <div class="meta-cell"><div class="meta-label">Clasificación</div><p><strong>Suplemento Dietético</strong><br>4.8⭐ · 518 reseñas · $9.76 Amazon.</p></div>
+      <div class="meta-cell"><div class="meta-label">Ingredientes</div><ul><li>Vitamina C 15mg</li><li>Rutina (Rutin) 100mg</li></ul></div>
     </div>
-    <div class="warn"><div class="warn-icon">⚠️</div><div class="warn-text"><strong>"Capilar" = capilares sanguíneos, NO el cabello</strong>Rutascorbina apoya los capilares sanguíneos (vasos diminutos), no el cabello. No lo presentes como suplemento capilar de pelo.</div></div>
+    <div class="warn"><div class="warn-icon">⚠️</div><div class="warn-text"><strong>"Capilar" = capilares sanguíneos, NO el cabello</strong>Rutascorbin apoya los capilares sanguíneos (vasos diminutos), no el cabello. No lo presentes como suplemento capilar de pelo.</div></div>
     <div class="sub-label"><div class="sl-bar" style="background:#3B82F6"></div><h3>Beneficios comunicables</h3></div>
     <div class="benefits">
       <div class="benefit"><div class="benefit-title">Vitamina C → Inmunidad + antioxidante</div><div class="benefit-desc">Apoya el sistema inmunológico, proporciona soporte antioxidante y contribuye a la formación normal de colágeno.</div></div>
@@ -1358,11 +1373,11 @@ img { display: block; max-width: 100%; }
     </div>
     <div class="hr"></div>
     <div class="sub-label"><div class="sl-bar" style="background:#6366F1"></div><h3>Hashtags</h3></div>
-    <div class="htags"><span class="htag">#Rutascorbina</span><span class="htag">#MiBotiquinLatino</span><span class="htag">#VitaminaC</span><span class="htag">#Antioxidante</span><span class="htag">#TikTokShop</span><span class="htag">#ad</span></div>
+    <div class="htags"><span class="htag">#Rutascorbin</span><span class="htag">#MiBotiquinLatino</span><span class="htag">#VitaminaC</span><span class="htag">#Antioxidante</span><span class="htag">#TikTokShop</span><span class="htag">#ad</span></div>
     <div class="hr"></div>
     <div class="sub-label"><div class="sl-bar" style="background:var(--navy)"></div><h3>Copy listo para usar</h3></div>
     <div class="snippets">
-      <div class="snippet">Vitamina C + Rutina 🍊 Soporte antioxidante e inmunológico, más Rutina para la salud de los capilares sanguíneos. Rutascorbina — dos ingredientes simples con propósito claro. Mi Botiquín Latino en TikTok Shop. #Rutascorbina #ad</div>
+      <div class="snippet">Vitamina C + Rutina 🍊 Soporte antioxidante e inmunológico, más Rutina para la salud de los capilares sanguíneos. Rutascorbin — dos ingredientes simples con propósito claro. Mi Botiquín Latino en TikTok Shop. #Rutascorbin #ad</div>
     </div>
     <div class="legal">† No evaluado por la FDA. Incluye #ad.</div>
   </div>

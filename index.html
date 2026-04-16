@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Botiquín Latino — Guía de Afiliados TikTok</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<style>
+/* ─────────────────────────────────────────────
+   TOKENS — Edit here to retheme everything
+───────────────────────────────────────────── */
+:root {
+  --navy:     #002147;
+  --red:      #D0021B;
+  --gold:     #F5A623;
+  --green:    #1A6B3C;
+  --purple:   #4A0E8F;
+  --teal:     #006D77;
+  --off:      #F8F5F0;
+  --ink:      #1C1C2E;
+  --muted:    #6B7A8D;
+  --border:   #E2E8F0;
+  --white:    #FFFFFF;
+  --r:        12px;
+  --page:     860px;
+}
+
+/* ─── RESET ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 15px; scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: #EDECEB; color: var(--ink); line-height: 1.6; }
+img { display: block; max-width: 100%; }
+
+/* ─── PAGE SHELL ─── */
+.doc { max-width: var(--page); margin: 0 auto; padding: 24px 16px 80px; display: flex; flex-direction: column; gap: 3px; }
+.card { background: var(--white); overflow: hidden; }
+.card:first-child { border-radius: var(--r) var(--r) 0 0; }
+.card:last-child  { border-radius: 0 0 var(--r) var(--r); }
+.card + .card     { border-top: 2px solid var(--off); }
+
+/* ─── PRINT ─── */
+@media print {
+  body { background: white; }
+  .doc { padding: 0; }
+  .card { border-radius: 0 !important; box-shadow: none !important; }
+  .no-print { display: none !important; }
+}
+
+/* ═══════════════════════════════════════════
+   COVER
+═══════════════════════════════════════════ */
+.cover {
+  min-height: 580px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  border-radius: var(--r) var(--r) 0 0;
+  background: var(--navy);
+}
+/* Background image slot — replace cover-bg.png with your photo */
+.cover-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('cover-bg.png');
+  background-size: cover;
+  background-position: center top;
+  opacity: .45;
+}
+/* Fallback gradient if no image */
+.cover-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(170deg, transparent 30%, var(--navy) 85%);
+}
+.cover-content {
+  position: relative;
+  z-index: 2;
+  padding: 48px 52px;
+}
+.cover-eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: .62rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.cover h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 5.5rem;
+  line-height: .95;
+  color: var(--white);
+  letter-spacing: .02em;
+  margin-bottom: 20px;
+}
+.cover h1 em {
+  color: var(--gold);
+  font-style: normal;
+  display: block;
+}
+.cover-desc {
+  font-size: 1rem;
+  color: rgba(255,255,255,.72);
+  max-width: 420px;
+  margin-bottom: 28px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+.cover-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.cover-pill {
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 100px;
+  padding: 5px 16px;
+  font-family: 'Space Mono', monospace;
+  font-size: .6rem;
+  color: rgba(255,255,255,.65);
+  letter-spacing: .08em;
+}
+
+/* ═══════════════════════════════════════════
+   INTRO / RULES
+═══════════════════════════════════════════ */
+.intro { padding: 52px; }
+.section-eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: .58rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.8rem;
+  line-height: 1;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+.section-lead {
+  font-size: .92rem;
+  color: var(--muted);
+  max-width: 560px;
+  margin-bottom: 36px;
+}
+.rules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.rule {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 16px 18px;
+  background: var(--off);
+  border-radius: 10px;
+  border-left: 4px solid var(--navy);
+}
+.rule-n {
+  font-family: 'Bebas Neue', monospace;
+  font-size: 1.6rem;
+  color: var(--navy);
+  line-height: 1;
+  min-width: 28px;
+  opacity: .35;
+}
+.rule strong { display: block; font-size: .85rem; color: var(--ink); margin-bottom: 2px; }
+.rule span { font-size: .78rem; color: var(--muted); line-height: 1.5; }
+
+/* TOC */
+.toc-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--navy); margin-bottom: 14px; letter-spacing: .04em; }
+.toc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.toc-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--off);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: background .15s;
+  border: 1px solid transparent;
+}
+.toc-link:hover { background: #e8e4de; border-color: var(--border); }
+.toc-n { font-family: 'Space Mono', monospace; font-size: .58rem; color: var(--muted); min-width: 20px; }
+.toc-info .toc-name { font-size: .78rem; font-weight: 600; line-height: 1.3; }
+.toc-info .toc-cat { font-size: .68rem; color: var(--muted); }
+
+/* ═══════════════════════════════════════════
+   BRAND HEADER — full-bleed with product photo
+═══════════════════════════════════════════ */
+.brand-header {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  min-height: 260px;
+  position: relative;
+  overflow: hidden;
+}
+.brand-header-left {
+  padding: 40px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 1;
+}
+.brand-header-left::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: .88;
+  z-index: -1;
+}
+/* Each brand has its own color via .c-* classes */
+.c-red    .brand-header-left::before, .c-red    .brand-accent { background: #8B1A1A; }
+.c-green  .brand-header-left::before, .c-green  .brand-accent { background: #1A5C28; }
+.c-orange .brand-header-left::before, .c-orange .brand-accent { background: #C94A00; }
+.c-brown  .brand-header-left::before, .c-brown  .brand-accent { background: #4E342E; }
+.c-forest .brand-header-left::before, .c-forest .brand-accent { background: #1B5E20; }
+.c-blue   .brand-header-left::before, .c-blue   .brand-accent { background: #0D3B7A; }
+.c-purple .brand-header-left::before, .c-purple .brand-accent { background: #4A0E8F; }
+.c-teal   .brand-header-left::before, .c-teal   .brand-accent { background: #00514A; }
+.c-wine   .brand-header-left::before, .c-wine   .brand-accent { background: #6D0027; }
+.c-olive  .brand-header-left::before, .c-olive  .brand-accent { background: #2E5902; }
+.c-indigo .brand-header-left::before, .c-indigo .brand-accent { background: #1A237E; }
+.c-ember  .brand-header-left::before, .c-ember  .brand-accent { background: #BF360C; }
+
+.brand-eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: .58rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.5);
+  margin-bottom: 10px;
+}
+.brand-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.6rem;
+  line-height: .95;
+  color: white;
+  letter-spacing: .03em;
+  margin-bottom: 12px;
+}
+.brand-name em {
+  font-style: normal;
+  color: rgba(255,255,255,.55);
+  display: block;
+  font-size: 2rem;
+}
+.brand-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.brand-tag {
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 100px;
+  padding: 3px 12px;
+  font-size: .68rem;
+  color: rgba(255,255,255,.8);
+  font-weight: 500;
+}
+.brand-tag.otc { background: var(--gold); color: var(--ink); border-color: var(--gold); font-weight: 700; }
+
+/* Product image slot */
+.brand-img-slot {
+  position: relative;
+  overflow: hidden;
+  background: rgba(0,0,0,.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brand-img-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 24px;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,.4));
+  transition: transform .3s ease;
+}
+.brand-img-slot img:hover { transform: scale(1.04); }
+/* Placeholder shown when no image yet */
+.img-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px;
+  text-align: center;
+  color: rgba(255,255,255,.3);
+}
+.img-placeholder .ph-icon { font-size: 2.4rem; }
+.img-placeholder .ph-label { font-family: 'Space Mono', monospace; font-size: .6rem; letter-spacing: .1em; line-height: 1.6; }
+/* Hide placeholder if real img is present */
+.brand-img-slot img + .img-placeholder { display: none; }
+
+/* ═══════════════════════════════════════════
+   BRAND BODY
+═══════════════════════════════════════════ */
+.brand-body { padding: 36px 44px 40px; }
+
+/* Meta strip */
+.meta-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+.meta-cell {
+  background: var(--off);
+  padding: 16px 18px;
+}
+.meta-label {
+  font-family: 'Space Mono', monospace;
+  font-size: .56rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.meta-cell p { font-size: .82rem; line-height: 1.5; }
+.meta-cell ul { padding-left: 14px; }
+.meta-cell li { font-size: .8rem; line-height: 1.7; }
+
+/* Warning box */
+.warn {
+  display: flex;
+  gap: 14px;
+  background: #FFFBEB;
+  border: 1px solid #F5D87A;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 28px;
+}
+.warn-icon { font-size: 1.1rem; line-height: 1.4; }
+.warn-text { font-size: .8rem; line-height: 1.6; color: #78350F; }
+.warn-text strong { display: block; font-size: .68rem; font-family: 'Space Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #92400E; margin-bottom: 3px; }
+
+/* Sub-section label */
+.sub-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  margin-top: 28px;
+}
+.sub-label .sl-bar {
+  width: 3px;
+  height: 18px;
+  border-radius: 2px;
+}
+.sub-label h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: .06em;
+  color: var(--ink);
+}
+
+/* Benefits grid */
+.benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 0;
+}
+.benefit {
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: #EFF6FF;
+  border-left: 3px solid #3B82F6;
+}
+.benefit-title {
+  font-size: .82rem;
+  font-weight: 700;
+  color: #1E3A8A;
+  margin-bottom: 3px;
+}
+.benefit-desc { font-size: .76rem; color: #475569; line-height: 1.55; }
+
+/* Examples */
+.examples { display: flex; flex-direction: column; gap: 8px; }
+.example {
+  background: var(--off);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+}
+.example-bar { width: 4px; background: var(--gold); flex-shrink: 0; }
+.example-inner { padding: 12px 14px; }
+.example-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: .56rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+.example-text { font-size: .8rem; font-style: italic; color: #374151; line-height: 1.55; }
+
+/* Si/No */
+.si-no {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.si-col, .no-col { border-radius: 10px; overflow: hidden; }
+.si-head, .no-head {
+  padding: 10px 16px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  letter-spacing: .1em;
+  color: white;
+}
+.si-head { background: var(--green); }
+.no-head { background: var(--red); }
+.si-items, .no-items { padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; }
+.si-items { background: #F0FDF4; }
+.no-items { background: #FFF5F5; }
+.si-item, .no-item { font-size: .78rem; line-height: 1.5; display: flex; gap: 8px; }
+.si-item::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.no-item::before { content: '✗'; color: var(--red); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+/* Hashtags */
+.htags { display: flex; flex-wrap: wrap; gap: 6px; }
+.htag {
+  background: #EEF2FF;
+  color: #3730A3;
+  border: 1px solid #C7D2FE;
+  border-radius: 100px;
+  padding: 4px 13px;
+  font-family: 'Space Mono', monospace;
+  font-size: .62rem;
+  font-weight: 700;
+}
+
+/* Snippets */
+.snippets { display: flex; flex-direction: column; gap: 10px; }
+.snippet {
+  background: var(--navy);
+  color: rgba(255,255,255,.88);
+  border-radius: 10px;
+  padding: 18px 20px 18px 52px;
+  font-size: .82rem;
+  line-height: 1.65;
+  position: relative;
+}
+.snippet::before {
+  content: '🎬';
+  position: absolute;
+  top: 16px;
+  left: 18px;
+  font-size: 1.1rem;
+}
+
+/* Legal */
+.legal {
+  margin-top: 24px;
+  padding: 12px 16px;
+  background: var(--off);
+  border-radius: 8px;
+  font-size: .69rem;
+  color: var(--muted);
+  line-height: 1.6;
+  border: 1px solid var(--border);
+}
+
+/* Divider */
+.hr { height: 1px; background: var(--border); margin: 26px 0; }
+
+/* ═══════════════════════════════════════════
+   CLOSING
+═══════════════════════════════════════════ */
+.closing {
+  background: var(--navy);
+  padding: 60px 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 0 0 var(--r) var(--r);
+}
+.closing h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 12px;
+  letter-spacing: .04em;
+}
+.closing p { font-size: .9rem; color: rgba(255,255,255,.6); max-width: 440px; margin-bottom: 28px; }
+.closing-pills { display: flex; gap: 10px; flex-wrap: justify-content; }
+.closing-pill {
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 100px;
+  padding: 6px 18px;
+  font-family: 'Space Mono', monospace;
+  font-size: .62rem;
+  color: rgba(255,255,255,.55);
+}
+.closing-note { margin-top: 24px; font-size: .68rem; color: rgba(255,255,255,.2); font-family: 'Space Mono', monospace; }
+
+/* ─── Floating print button ─── */
+.fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--navy);
+  color: white;
+  border: none;
+  border-radius: 100px;
+  padding: 12px 22px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .82rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0,0,0,.25);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background .15s;
+}
+.fab:hover { background: #003366; }
+@media print { .fab { display: none; } }
+
+.cover-logo { margin-bottom: 24px; }
+.cover-logo img { height: 56px; width: auto; }
+.intro-logo { margin-bottom: 28px; }
+.intro-logo img { height: 44px; width: auto; }
+.closing-logo { margin-bottom: 20px; }
+.closing-logo img { height: 52px; width: auto; opacity: .9; }
+</style>
+</head>
+<body>
+
+<button class="fab no-print" onclick="window.print()">🖨 Imprimir / Guardar PDF</button>
+
+<div class="doc">
+
+<!-- ══════════════ COVER ══════════════ -->
+<div class="card cover">
+  <!-- Replace cover-bg.png with any lifestyle / product photo -->
+  <div class="cover-bg"></div>
+  <div class="cover-content">
+    <div class="cover-logo">
+    <!-- IMAGE FILE: logo-white.png (versión blanca del logo para fondo oscuro) -->
+    <img src="logo-white.png" alt="Mi Botiquín Latino" onerror="this.style.display='none'">
+  </div>
+  <div class="cover-eyebrow">Menper Group · Unlimitify · 2025</div>
+    <h1>Mi Botiquín<em>Latino</em></h1>
+    <p class="cover-desc">Guía oficial de talking points para afiliados TikTok Shop — todo lo que necesitas saber para crear contenido correcto, confiable y efectivo.</p>
+    <div class="cover-pills">
+      <span class="cover-pill">12 marcas</span>
+      <span class="cover-pill">Claims aprobados</span>
+      <span class="cover-pill">Copy listo para usar</span>
+      <span class="cover-pill">Beneficios por ingrediente</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ REGLAS ══════════════ -->
+<div class="card intro">
+  <div class="intro-logo">
+    <!-- IMAGE FILE: logo.png (versión a color) -->
+    <img src="logo.png" alt="Mi Botiquín Latino" onerror="this.style.display='none'">
+  </div>
+  <div class="section-eyebrow">Antes de empezar</div>
+  <div class="section-title">Las reglas del juego</div>
+  <p class="section-lead">No es complicado — pero sí es obligatorio. Lee esto una vez y tenlo claro para siempre.</p>
+
+  <div class="rules">
+    <div class="rule"><div class="rule-n">01</div><div><strong>Divulga siempre.</strong><span>Usa #ad o #publicidad en cada video patrocinado. Es ley, no opcional.</span></div></div>
+    <div class="rule"><div class="rule-n">02</div><div><strong>Suplementos ≠ medicamentos.</strong><span>No diagnostican, tratan, curan ni previenen enfermedades. Los OTC tienen claims específicos — úsalos textualmente.</span></div></div>
+    <div class="rule"><div class="rule-n">03</div><div><strong>Uso tradicional = tu escudo.</strong><span>Para herbales: "ha sido usado por generaciones para apoyar..." — nunca la afirmación directa.</span></div></div>
+    <div class="rule"><div class="rule-n">04</div><div><strong>OTC tiene más libertad.</strong><span>Parasitol, Polvos de Sulpha y La Vaca Mascura son OTC — puedes afirmar el beneficio de su etiqueta.</span></div></div>
+    <div class="rule"><div class="rule-n">05</div><div><strong>Sin hashtags de enfermedad.</strong><span>Evita: #anemia #alzheimer #tiroides #cancer #covid — TikTok los detecta.</span></div></div>
+    <div class="rule"><div class="rule-n">06</div><div><strong>Honestidad ante todo.</strong><span>Solo experiencias reales. No exageres resultados. Tu credibilidad vale más que una venta.</span></div></div>
+  </div>
+
+  <div class="toc-title">12 marcas en esta guía</div>
+  <div class="toc-grid">
+    <a href="#scotts" class="toc-link"><span class="toc-n">01</span><div class="toc-info"><div class="toc-name">Emulsión de Escocia</div><div class="toc-cat">Vitaminas infantiles</div></div></a>
+    <a href="#apetol" class="toc-link"><span class="toc-n">02</span><div class="toc-info"><div class="toc-name">Apetol</div><div class="toc-cat">Apetito + vitaminas</div></div></a>
+    <a href="#parasitol" class="toc-link"><span class="toc-n">03</span><div class="toc-info"><div class="toc-name">Parasitol</div><div class="toc-cat">OTC · Oxiuros</div></div></a>
+    <a href="#lavaca" class="toc-link"><span class="toc-n">04</span><div class="toc-info"><div class="toc-name">La Vaca Mascura</div><div class="toc-cat">OTC · Analgésico tópico</div></div></a>
+    <a href="#tchakowski" class="toc-link"><span class="toc-n">05</span><div class="toc-info"><div class="toc-name">Bálsamo Tchakowski</div><div class="toc-cat">Digestivo · Propóleo</div></div></a>
+    <a href="#polvos" class="toc-link"><span class="toc-n">06</span><div class="toc-info"><div class="toc-name">Polvos de Sulpha</div><div class="toc-cat">OTC · Antibiótico tópico</div></div></a>
+    <a href="#opal" class="toc-link"><span class="toc-n">07</span><div class="toc-info"><div class="toc-name">Opal Hand Sanitizer</div><div class="toc-cat">Cosmético · Aromaterapia</div></div></a>
+    <a href="#zenpaw" class="toc-link"><span class="toc-n">08</span><div class="toc-info"><div class="toc-name">ZenPaw</div><div class="toc-cat">Pet · Alergias caninas</div></div></a>
+    <a href="#vino" class="toc-link"><span class="toc-n">09</span><div class="toc-info"><div class="toc-name">Vino Carne y Hierro</div><div class="toc-cat">Hierro natural</div></div></a>
+    <a href="#rabano" class="toc-link"><span class="toc-n">10</span><div class="toc-info"><div class="toc-name">Rábano Yodado</div><div class="toc-cat">Energía · Tiroides</div></div></a>
+    <a href="#fitina" class="toc-link"><span class="toc-n">11</span><div class="toc-info"><div class="toc-name">Fitina</div><div class="toc-cat">Sistema nervioso</div></div></a>
+    <a href="#rutascorbin" class="toc-link"><span class="toc-n">12</span><div class="toc-info"><div class="toc-name">Rutascorbina</div><div class="toc-cat">Vitamina C + Rutina</div></div></a>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+  BRAND MACRO — copy/paste this block to add brands
+  Change: id, c-COLOR, image filename, brand-name, tags, all content
+══════════════════════════════════════════ -->
+
+
+<!-- ══ 01 · EMULSIÓN DE ESCOCIA / SCOTT'S ══ -->
+<div class="card c-red" id="scotts">
+  <div class="brand-header">
+    <div class="brand-header-left">
+      <div class="brand-eyebrow">Marca 01 · Suplemento Dietético</div>
+      <div class="brand-name">Emulsión<em>de Escocia</em></div>
+      <div class="brand-tags">
+        <span class="brand-tag">Vitaminas A · D · E · B1</span>
+        <span class="brand-tag">Omega-3 DHA</span>
+        <span class="brand-tag">5 sabores</span>
+        <span class="brand-tag">6.5 oz · 15.3 oz</span>
+      </div>
+    </div>
+    <div class="brand-img-slot">
+      <!-- IMAGE FILE: scotts.png -->
+      <img src="scotts.png" alt="Emulsión de Escocia" onerror="this.style.display='none'">
+      <div class="img-placeholder">
+        <div class="ph-icon">🐟</div>
+        <div class="ph-label">Sube tu imagen<br>como<br><strong>scotts.png</strong></div>
+      </div>
+    </div>
+  </div>
+  <div class="brand-body">
+    <div class="meta-strip">
+      <div class="meta-cell">
+        <div class="meta-label">Descripción</div>
+        <p>Suplemento multivitamínico líquido con Aceite de Hígado de Bacalao. Disponible en cereza, naranja, fresa-plátano, flan y mandarina-vainilla.</p>
+      </div>
+      <div class="meta-cell">
+        <div class="meta-label">Clasificación</div>
+        <p><strong>Suplemento Dietético</strong><br>Confían en él generaciones de familias latinas.</p>
+      </div>
+      <div class="meta-cell">
+        <div class="meta-label">Ingredientes clave</div>
+        <ul>
+          <li>Aceite de Hígado de Bacalao</li>
+          <li>Vitamina A · D · E · B1</li>
+          <li>Omega-3 DHA (natural)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="warn">
+      <div class="warn-icon">⚠️</div>
+      <div class="warn-text"><strong>Nota clave</strong>Siempre usa el marco tradicional: "el aceite de hígado de bacalao ha sido usado por generaciones para apoyar el desarrollo infantil." Nunca afirmes que cura o previene enfermedades.</div>
+    </div>
+
+    <div class="sub-label"><div class="sl-bar" style="background:#3B82F6"></div><h3>Beneficios por ingrediente</h3></div>
+    <div class="benefits">
+      <div class="benefit"><div class="benefit-title">Vitamina A → Visión e inmunidad</div><div class="benefit-desc">Contribuye al mantenimiento de la visión normal y al funcionamiento del sistema inmunológico.</div></div>
+      <div class="benefit"><div class="benefit-title">Vitamina D → Huesos y dientes</div><div class="benefit-desc">Ayuda a la absorción de calcio; promueve el crecimiento óseo saludable y dientes fuertes.</div></div>
+      <div class="benefit"><div class="benefit-title">Omega-3 DHA → Cerebro y visión</div><div class="benefit-desc">Ácido graso esencial que apoya el desarrollo del cerebro y la función visual en niños.</div></div>
+      <div class="benefit"><div class="benefit-title">Vitamina E → Antioxidante</div><div class="benefit-desc">Protege las células del daño oxidativo; soporte antioxidante general.</div></div>
+      <div class="benefit"><div class="benefit-title">Vitamina B1 → Energía celular</div><div class="benefit-desc">Contribuye al metabolismo energético normal; apoya el sistema nervioso.</div></div>
+      <div class="benefit"><div class="benefit-title">A + D → Apoyo respiratorio</div><div class="benefit-desc">Juntas apoyan la salud inmunológica y el bienestar respiratorio en cambios estacionales.</div></div>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="sub-label"><div class="sl-bar" style="background:var(--gold)"></div><h3>Cómo comunicarlo — ejemplos reales</h3></div>
+    <div class="examples">
+      <div class="example"><div class="example-bar"></div><div class="example-inner"><div class="example-tag">Vitamina D → Huesos</div><div class="example-text">"Emulsión de Escocia contiene Vitamina D, que ayuda a la absorción de calcio para que los huesos y dientes de tus hijos crezcan fuertes 🦷 #MiBotiquinLatino #ad"</div></div></div>
+      <div class="example"><div class="example-bar"></div><div class="example-inner"><div class="example-tag">DHA → Cerebro</div><div class="example-text">"¿Sabías que el aceite de hígado de bacalao contiene DHA natural? Apoya el desarrollo del cerebro de los niños. Por eso las mamás de antes lo daban siempre 🐟 #ad"</div></div></div>
+      <div class="example"><div class="example-bar"></div><div class="example-inner"><div class="example-tag">Nostalgia</div><div class="example-text">"Ese sabor a naranja que conocemos de siempre — Emulsión de Escocia. La tradición que las familias latinas han confiado por generaciones, ahora en Mi Botiquín Latino 🧡 #ad"</div></div></div>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="sub-label"><div class="sl-bar" style="background:var(--green)"></div><h3>SÍ decir vs. NO decir</h3></div>
+    <div class="si-no">
+      <div class="si-col"><div class="si-head">✅ SÍ DECIR</div><div class="si-items">
+        <div class="si-item">El aceite de hígado de bacalao ha sido usado por generaciones para apoyar el desarrollo saludable.</div>
+        <div class="si-item">Vitamina D para apoyar el desarrollo de huesos y dientes fuertes.</div>
+        <div class="si-item">DHA natural para apoyar el desarrollo del cerebro y la función visual.</div>
+        <div class="si-item">Vitaminas A y D para apoyar la salud inmunológica y el bienestar respiratorio.</div>
+        <div class="si-item">5 sabores — hasta para los comedores más exigentes.</div>
+      </div></div>
+      <div class="no-col"><div class="no-head">🚫 NO DECIR</div><div class="no-items">
+        <div class="no-item">"Cura resfriados" — es suplemento, no medicamento.</div>
+        <div class="no-item">"Hace crecer más alto a los niños" — claim no aprobado.</div>
+        <div class="no-item">"Fortalece el sistema inmunológico" como afirmación absoluta.</div>
+        <div class="no-item">Hashtags: #cura #gripe #resfriado #medicamento.</div>
+      </div></div>
+    </div>
+
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:#6366F1"></div><h3>Hashtags recomendados</h3></div>
+    <div class="htags"><span class="htag">#EmulsionDeEscocia</span><span class="htag">#ScottsEmulsion</span><span class="htag">#MiBotiquinLatino</span><span class="htag">#VitaminasNiños</span><span class="htag">#CodLiverOil</span><span class="htag">#SaludInfantil</span><span class="htag">#TikTokShop</span><span class="htag">#MamaLatina</span><span class="htag">#ad</span></div>
+
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:var(--navy)"></div><h3>Copy listo para usar</h3></div>
+    <div class="snippets">
+      <div class="snippet">¿Sabes cuál era el secreto de los niños sanos de antes? Aceite de hígado de bacalao con Vitaminas A, D y DHA. Emulsión de Escocia — la tradición en 5 sabores deliciosos. Encuentra en Mi Botiquín Latino 🛒 #EmulsionDeEscocia #MiBotiquinLatino #ad</div>
+      <div class="snippet">Vitamina D para huesos fuertes, DHA para el desarrollo del cerebro, Vitamina A para el sistema inmunológico — todo en una cucharada. Emulsión de Escocia en TikTok Shop 🐟 #ScottsEmulsion #ad</div>
+    </div>
+    <div class="legal">† No evaluado por la FDA. No destinado a diagnosticar, tratar, curar o prevenir enfermedad. Incluye siempre #ad o #publicidad.</div>
+  </div>
+</div>
+
+
+<!-- ══ 02 · APETOL ══ -->
+<div class="card c-green" id="apetol">
+  <div class="brand-header">
+    <div class="brand-header-left">
+      <div class="brand-eyebrow">Marca 02 · Suplemento Dietético</div>
+      <div class="brand-name">Apetol</div>
+      <div class="brand-tags">
+        <span class="brand-tag">Potenciador del apetito</span>
+        <span class="brand-tag">Complejo B · Zinc</span>
+        <span class="brand-tag">6 oz · 18 porciones</span>
+        <span class="brand-tag">4.3⭐ Amazon</span>
+      </div>
+    </div>
+    <div class="brand-img-slot">
+      <!-- IMAGE FILE: apetol.png -->
+      <img src="apetol.png" alt="Apetol" onerror="this.style.display='none'">
+      <div class="img-placeholder"><div class="ph-icon">🍎</div><div class="ph-label">Sube tu imagen<br>como<br><strong>apetol.png</strong></div></div>
+    </div>
+  </div>
+  <div class="brand-body">
+    <div class="meta-strip">
+      <div class="meta-cell"><div class="meta-label">Descripción</div><p>Potenciador del apetito líquido para niños y adultos. Apoya apetito, peso saludable, energía cerebral, memoria y salud digestiva. 6 oz = 1 mes de suministro.</p></div>
+      <div class="meta-cell"><div class="meta-label">Clasificación</div><p><strong>Suplemento Dietético</strong><br>4.3⭐ · 156+ reseñas · 200+ comprados/mes.</p></div>
+      <div class="meta-cell"><div class="meta-label">Ingredientes (Supplement Facts)</div><ul><li>Tiamina (B1)</li><li>Riboflavina (B2)</li><li>Niacina (B3)</li><li>Vitamina B6 · B12</li><li>Zinc</li></ul></div>
+    </div>
+    <div class="warn"><div class="warn-icon">⚠️</div><div class="warn-text"><strong>Potenciador del apetito — OK usarlo</strong>El listing oficial de Amazon sí usa este término. Puedes usarlo. Lo que NO puedes: afirmar que trata anorexia, desnutrición o bajo peso clínico.</div></div>
+
+    <div class="sub-label"><div class="sl-bar" style="background:#3B82F6"></div><h3>Beneficios por ingrediente</h3></div>
+    <div class="benefits">
+      <div class="benefit"><div class="benefit-title">Complejo B (B1,B2,B3,B6,B12) → Energía</div><div class="benefit-desc">Apoyan el metabolismo energético diario — convierten los alimentos en energía usable. Esenciales para el sistema nervioso.</div></div>
+      <div class="benefit"><div class="benefit-title">B6 + B12 → Cerebro y memoria</div><div class="benefit-desc">Apoyan la claridad mental, retención de memoria y energía diaria. Para niños en etapa escolar y adultos con rutinas exigentes.</div></div>
+      <div class="benefit"><div class="benefit-title">Zinc → Inmunidad y crecimiento</div><div class="benefit-desc">Mineral esencial para la función inmunológica normal, el crecimiento y el desarrollo saludable.</div></div>
+      <div class="benefit"><div class="benefit-title">Formato líquido → Mejor absorción</div><div class="benefit-desc">Absorción más rápida y eficiente que pastillas. Sin rellenos artificiales. Seguro para toda la familia.</div></div>
+      <div class="benefit"><div class="benefit-title">Salud digestiva → Más nutrientes</div><div class="benefit-desc">Apoya el sistema digestivo para una mejor absorción de nutrientes — clave para mejorar el apetito de forma sostenida.</div></div>
+      <div class="benefit"><div class="benefit-title">Potenciador del apetito</div><div class="benefit-desc">Ideal para comedores exigentes, recuperación post-enfermedad o cualquiera que necesite apoyo con el apetito.</div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:var(--gold)"></div><h3>Cómo comunicarlo</h3></div>
+    <div class="examples">
+      <div class="example"><div class="example-bar"></div><div class="example-inner"><div class="example-tag">Comedores exigentes</div><div class="example-text">"¿Tu hijo no quiere comer nada? Apetol es un potenciador del apetito con Complejo B y Zinc — fórmula líquida de fácil absorción 🍎 #Apetol #MiBotiquinLatino #ad"</div></div></div>
+      <div class="example"><div class="example-bar"></div><div class="example-inner"><div class="example-tag">Energía cerebral</div><div class="example-text">"No solo apoya el apetito — Apetol tiene B6 y B12 para la claridad mental y energía diaria. Para niños en etapa escolar y adultos ocupados 🧠 #ad"</div></div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="si-no">
+      <div class="si-col"><div class="si-head">✅ SÍ DECIR</div><div class="si-items">
+        <div class="si-item">Potenciador del apetito para niños y adultos — así dice el listing oficial.</div>
+        <div class="si-item">Vitaminas del complejo B para el metabolismo energético.</div>
+        <div class="si-item">Apoya la salud digestiva para mejor absorción de nutrientes.</div>
+        <div class="si-item">Fórmula líquida de absorción rápida. Sin rellenos artificiales.</div>
+      </div></div>
+      <div class="no-col"><div class="no-head">🚫 NO DECIR</div><div class="no-items">
+        <div class="no-item">"Trata la anorexia" o "la desnutrición" — condiciones médicas.</div>
+        <div class="no-item">"Garantiza que tu hijo coma" — resultado garantizado.</div>
+        <div class="no-item">"Reemplaza la alimentación balanceada."</div>
+        <div class="no-item">Hashtags: #anorexia #desnutricion #bajoPeso.</div>
+      </div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:#6366F1"></div><h3>Hashtags</h3></div>
+    <div class="htags"><span class="htag">#Apetol</span><span class="htag">#MiBotiquinLatino</span><span class="htag">#PotenciadorApetito</span><span class="htag">#VitaminasNiños</span><span class="htag">#TikTokShop</span><span class="htag">#ComplexoB</span><span class="htag">#SaludInfantil</span><span class="htag">#ad</span></div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:var(--navy)"></div><h3>Copy listo para usar</h3></div>
+    <div class="snippets">
+      <div class="snippet">¿Tu hijo es el rey de los comedores exigentes? 👑 Apetol — potenciador del apetito líquido con Vitaminas B1, B2, B3, B6, B12 y Zinc. Sin rellenos artificiales. 6 oz = 1 mes. Encuentra en Mi Botiquín Latino 🛒 #Apetol #ad</div>
+      <div class="snippet">Apetol no solo apoya el apetito — también tiene B6 y B12 para la energía cerebral y la memoria. Un suplemento completo para niños y adultos con rutinas exigentes 💪 #MiBotiquinLatino #ad</div>
+    </div>
+    <div class="legal">† No evaluado por la FDA. No destinado a diagnosticar, tratar, curar o prevenir enfermedad. Incluye #ad.</div>
+  </div>
+</div>
+
+
+<!-- ══ 03 · PARASITOL ══ -->
+<div class="card c-orange" id="parasitol">
+  <div class="brand-header">
+    <div class="brand-header-left">
+      <div class="brand-eyebrow">Marca 03 · OTC — Medicamento de venta libre</div>
+      <div class="brand-name">Parasitol</div>
+      <div class="brand-tags">
+        <span class="brand-tag otc">OTC Aprobado</span>
+        <span class="brand-tag">Pamoato de Pirantel 144mg</span>
+        <span class="brand-tag">1 fl oz · Con dosificador</span>
+      </div>
+    </div>
+    <div class="brand-img-slot">
+      <img src="parasitol.png" alt="Parasitol" onerror="this.style.display='none'">
+      <div class="img-placeholder"><div class="ph-icon">🛡️</div><div class="ph-label">Sube tu imagen<br>como<br><strong>parasitol.png</strong></div></div>
+    </div>
+  </div>
+  <div class="brand-body">
+    <div class="meta-strip">
+      <div class="meta-cell"><div class="meta-label">Descripción</div><p>Medicamento OTC líquido para el tratamiento de oxiuros (pinworms). 1 fl oz con vaso dosificador incluido.</p></div>
+      <div class="meta-cell"><div class="meta-label">Clasificación</div><p><strong>OTC — Drug aprobado FDA</strong><br>Puede afirmar que TRATA oxiuros.</p></div>
+      <div class="meta-cell"><div class="meta-label">Ingrediente activo</div><ul><li>Pamoato de Pirantel 144 mg</li></ul></div>
+    </div>
+    <div class="warn"><div class="warn-icon">⚠️</div><div class="warn-text"><strong>Es OTC — no suplemento</strong>Puedes afirmar que TRATA oxiuros. No digas que los previene. Siempre indica que es medicamento y que hay que seguir instrucciones.</div></div>
+    <div class="sub-label"><div class="sl-bar" style="background:#3B82F6"></div><h3>Beneficios aprobados</h3></div>
+    <div class="benefits">
+      <div class="benefit"><div class="benefit-title">Tratamiento de oxiuros</div><div class="benefit-desc">Pamoato de Pirantel — ingrediente activo OTC aprobado por la FDA para el tratamiento de infecciones por oxiuros en niños y adultos.</div></div>
+      <div class="benefit"><div class="benefit-title">Fácil dosificación</div><div class="benefit-desc">Formato líquido con vaso dosificador incluido para dosificación precisa y fácil administración.</div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="si-no">
+      <div class="si-col"><div class="si-head">✅ SÍ DECIR</div><div class="si-items">
+        <div class="si-item">Parasitol está indicado para el TRATAMIENTO de oxiuros — OTC aprobado.</div>
+        <div class="si-item">Pamoato de Pirantel, ingrediente activo aprobado por FDA.</div>
+        <div class="si-item">Incluye vaso dosificador para dosificación precisa.</div>
+      </div></div>
+      <div class="no-col"><div class="no-head">🚫 NO DECIR</div><div class="no-items">
+        <div class="no-item">"Previene los oxiuros" — solo los trata.</div>
+        <div class="no-item">"Cura cualquier parásito" — solo oxiuros.</div>
+        <div class="no-item">Mostrar imágenes de parásitos — viola políticas TikTok.</div>
+      </div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:#6366F1"></div><h3>Hashtags</h3></div>
+    <div class="htags"><span class="htag">#Parasitol</span><span class="htag">#MiBotiquinLatino</span><span class="htag">#OxiurosEnNiños</span><span class="htag">#TratamientoOTC</span><span class="htag">#TikTokShop</span><span class="htag">#SaludFamiliar</span><span class="htag">#ad</span></div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:var(--navy)"></div><h3>Copy listo para usar</h3></div>
+    <div class="snippets">
+      <div class="snippet">¿Sospechas que hay oxiuros en casa? Parasitol es un medicamento OTC con Pamoato de Pirantel — ingrediente aprobado para el tratamiento de oxiuros. Con vaso dosificador incluido 🛡️ Disponible en Mi Botiquín Latino. #Parasitol #ad</div>
+    </div>
+    <div class="legal">Parasitol es un medicamento OTC. Sigue siempre las instrucciones de la etiqueta. Consulta con tu médico.</div>
+  </div>
+</div>
+
+
+<!-- ══ 04 · LA VACA MASCURA ══ -->
+<div class="card c-brown" id="lavaca">
+  <div class="brand-header">
+    <div class="brand-header-left">
+      <div class="brand-eyebrow">Marca 04 · OTC / Cosmético</div>
+      <div class="brand-name">La Vaca<em>Mascura</em></div>
+      <div class="brand-tags">
+        <span class="brand-tag otc">OTC — La Vaca Mascura</span>
+        <span class="brand-tag">Metil Salicilato 10.5%</span>
+        <span class="brand-tag">Wintergreen · 3 oz</span>
+      </div>
+    </div>
+    <div class="brand-img-slot">
+      <img src="lavaca.png" alt="La Vaca Mascura" onerror="this.style.display='none'">
+      <div class="img-placeholder"><div class="ph-icon">🐄</div><div class="ph-label">Sube tu imagen<br>como<br><strong>lavaca.png</strong></div></div>
+    </div>
+  </div>
+  <div class="brand-body">
+    <div class="meta-strip">
+      <div class="meta-cell"><div class="meta-label">Descripción</div><p>Ungüento analgésico tópico OTC para alivio temporal de dolores musculares y articulares. La Pomada de la Vaca (versión cosmética) no tiene claims terapéuticos.</p></div>
+      <div class="meta-cell"><div class="meta-label">Clasificación</div><p><strong>OTC</strong> — La Vaca Mascura / Plus<br><strong>Cosmético</strong> — Pomada de la Vaca</p></div>
+      <div class="meta-cell"><div class="meta-label">Ingredientes</div><ul><li>Metil Salicilato 10.5% (OTC)</li><li>Mentol · Alcanfor</li><li>Aceite de Clavo · Menta</li></ul></div>
+    </div>
+    <div class="warn"><div class="warn-icon">⚠️</div><div class="warn-text"><strong>OTC vs. Cosmético</strong><strong>La Vaca Mascura</strong> puede afirmar alivio de dolores musculares. <strong>Pomada de la Vaca (cosmética)</strong> NO puede hacer claims terapéuticos.</div></div>
+    <div class="sub-label"><div class="sl-bar" style="background:#3B82F6"></div><h3>Beneficios aprobados (OTC)</h3></div>
+    <div class="benefits">
+      <div class="benefit"><div class="benefit-title">Alivio temporal dolor muscular</div><div class="benefit-desc">Metil Salicilato 10.5% para alivio temporal de dolores musculares asociados a artritis simple, esguinces y dolor de espalda.</div></div>
+      <div class="benefit"><div class="benefit-title">Sensación frío-calor clásica</div><div class="benefit-desc">El efecto inconfundible del Wintergreen — mentol y Metil Salicilato. El clásico que las familias latinas conocen de generaciones.</div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="si-no">
+      <div class="si-col"><div class="si-head">✅ SÍ DECIR</div><div class="si-items">
+        <div class="si-item">Alivio temporal de dolores musculares y articulares (artritis simple, esguinces, espalda).</div>
+        <div class="si-item">Metil Salicilato 10.5% — ingrediente activo OTC aprobado.</div>
+        <div class="si-item">El clásico con aroma a Wintergreen que las familias latinas conocen.</div>
+      </div></div>
+      <div class="no-col"><div class="no-head">🚫 NO DECIR</div><div class="no-items">
+        <div class="no-item">"Cura la artritis" — solo alivio temporal.</div>
+        <div class="no-item">"La Pomada de la Vaca trata dolores" — versión cosmética.</div>
+        <div class="no-item">Aplicar en heridas abiertas — solo piel sana.</div>
+      </div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:#6366F1"></div><h3>Hashtags</h3></div>
+    <div class="htags"><span class="htag">#LaVacaMascura</span><span class="htag">#PomadaDeLaVaca</span><span class="htag">#MiBotiquinLatino</span><span class="htag">#DolorMuscular</span><span class="htag">#Wintergreen</span><span class="htag">#TikTokShop</span><span class="htag">#ad</span></div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:var(--navy)"></div><h3>Copy listo para usar</h3></div>
+    <div class="snippets">
+      <div class="snippet">Ese dolor muscular después de un largo día — La Vaca Mascura al rescate 🐄 Metil Salicilato OTC para el alivio temporal de dolores musculares y articulares. El clásico con aroma a Wintergreen. Disponible en Mi Botiquín Latino. #LaVacaMascura #ad</div>
+    </div>
+    <div class="legal">OTC de uso externo. Solo en piel sana. Sigue instrucciones de la etiqueta.</div>
+  </div>
+</div>
+
+
+<!-- ══ 05 · BÁLSAMO TCHAKOWSKI ══ -->
+<div class="card c-forest" id="tchakowski">
+  <div class="brand-header">
+    <div class="brand-header-left">
+      <div class="brand-eyebrow">Marca 05 · Suplemento Dietético</div>
+      <div class="brand-name">Bálsamo<em>Tchakowski</em></div>
+      <div class="brand-tags">
+        <span class="brand-tag">Propóleo de Abeja</span>
+        <span class="brand-tag">Vitamina E</span>
+        <span class="brand-tag">2 oz · Uso interno y externo</span>
+      </div>
+    </div>
+    <div class="brand-img-slot">
+      <img src="tchakowski.png" alt="Bálsamo Tchakowski" onerror="this.style.display='none'">
+      <div class="img-placeholder"><div class="ph-icon">🌿</div><div class="ph-label">Sube tu imagen<br>como<br><strong>tchakowski.png</strong></div></div>
+    </div>
+  </div>
+  <div class="brand-body">
+    <div class="meta-strip">
+      <div class="meta-cell"><div class="meta-label">Descripción</div><p>Auxiliar digestivo líquido a base de Propóleo de Abeja y Vitamina E. 2 oz. Clásico del botiquín latino.</p></div>
+      <div class="meta-cell"><div class="meta-label">Clasificación</div><p><strong>Suplemento Dietético</strong></p></div>
+      <div class="meta-cell"><div class="meta-label">Ingredientes</div><ul><li>Propóleo de Abeja</li><li>Vitamina E</li></ul></div>
+    </div>
+    <div class="warn"><div class="warn-icon">⚠️</div><div class="warn-text"><strong>Marco de uso tradicional siempre</strong>"El propóleo ha sido usado tradicionalmente como auxiliar digestivo." No afirmes propiedades antibióticas ni curativas.</div></div>
+    <div class="sub-label"><div class="sl-bar" style="background:#3B82F6"></div><h3>Beneficios comunicables</h3></div>
+    <div class="benefits">
+      <div class="benefit"><div class="benefit-title">Propóleo → Auxiliar digestivo tradicional</div><div class="benefit-desc">Usado por siglos en la medicina tradicional como auxiliar digestivo y de bienestar general.</div></div>
+      <div class="benefit"><div class="benefit-title">Vitamina E → Antioxidante</div><div class="benefit-desc">Soporte antioxidante para el bienestar general del organismo.</div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="si-no">
+      <div class="si-col"><div class="si-head">✅ SÍ DECIR</div><div class="si-items">
+        <div class="si-item">El propóleo ha sido usado tradicionalmente como auxiliar digestivo.</div>
+        <div class="si-item">Propóleo de Abeja y Vitamina E — clásico de confianza.</div>
+      </div></div>
+      <div class="no-col"><div class="no-head">🚫 NO DECIR</div><div class="no-items">
+        <div class="no-item">"Es antibiótico natural" — no aprobado.</div>
+        <div class="no-item">"Cura infecciones" — no es medicamento.</div>
+        <div class="no-item">Hashtags: #antibiotico #covid #infeccion.</div>
+      </div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:#6366F1"></div><h3>Hashtags</h3></div>
+    <div class="htags"><span class="htag">#BalsamoTchakowski</span><span class="htag">#MiBotiquinLatino</span><span class="htag">#Propoleo</span><span class="htag">#SaludDigestiva</span><span class="htag">#TikTokShop</span><span class="htag">#ad</span></div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:var(--navy)"></div><h3>Copy listo para usar</h3></div>
+    <div class="snippets">
+      <div class="snippet">El propóleo de abeja ha sido usado por generaciones como auxiliar digestivo 🍯 Bálsamo Tchakowski — con Propóleo y Vitamina E. Un clásico del botiquín latino en Mi Botiquín Latino 🛒 #BalsamoTchakowski #ad</div>
+    </div>
+    <div class="legal">† No evaluado por la FDA. Incluye #ad.</div>
+  </div>
+</div>
+
+
+<!-- ══ 06 · POLVOS DE SULPHA ══ -->
+<div class="card c-blue" id="polvos">
+  <div class="brand-header">
+    <div class="brand-header-left">
+      <div class="brand-eyebrow">Marca 06 · OTC — First Aid Antibiotic</div>
+      <div class="brand-name">Polvos<em>de Sulpha</em></div>
+      <div class="brand-tags">
+        <span class="brand-tag otc">OTC Aprobado</span>
+        <span class="brand-tag">4.6⭐ · +3,700 reseñas</span>
+        <span class="brand-tag">Bacitracina Zinc + Polimixina B</span>
+      </div>
+    </div>
+    <div class="brand-img-slot">
+      <img src="polvos.png" alt="Polvos de Sulpha" onerror="this.style.display='none'">
+      <div class="img-placeholder"><div class="ph-icon">🩹</div><div class="ph-label">Sube tu imagen<br>como<br><strong>polvos.png</strong></div></div>
+    </div>
+  </div>
+  <div class="brand-body">
+    <div class="meta-strip">
+      <div class="meta-cell"><div class="meta-label">Descripción</div><p>Polvo antibiótico OTC para prevenir infecciones en cortes menores, raspones y quemaduras superficiales. 7.5 g. El más vendido del catálogo.</p></div>
+      <div class="meta-cell"><div class="meta-label">Clasificación</div><p><strong>OTC — First Aid Antibiotic</strong><br>4.6⭐ · +3,700 reseñas Amazon.</p></div>
+      <div class="meta-cell"><div class="meta-label">Ingredientes activos</div><ul><li>Bacitracina Zinc 500 unidades</li><li>Polimixina B Sulfato 10,000 unidades</li></ul></div>
+    </div>
+    <div class="sub-label"><div class="sl-bar" style="background:#3B82F6"></div><h3>Beneficios aprobados</h3></div>
+    <div class="benefits">
+      <div class="benefit"><div class="benefit-title">Previene infecciones</div><div class="benefit-desc">Ayuda a prevenir infecciones en cortes menores, raspones y quemaduras superficiales — indicación OTC aprobada.</div></div>
+      <div class="benefit"><div class="benefit-title">Formato polvo sin grasa</div><div class="benefit-desc">Sin ungüento, sin residuo pegajoso. Aplicación precisa, limpia y fácil.</div></div>
+      <div class="benefit"><div class="benefit-title">Doble protección antibiótica</div><div class="benefit-desc">Bacitracina Zinc + Polimixina B — dos ingredientes activos OTC para cobertura amplia en primeros auxilios.</div></div>
+      <div class="benefit"><div class="benefit-title">Social proof masivo</div><div class="benefit-desc">+3,700 reseñas con 4.6⭐ en Amazon. El más vendido y validado del catálogo Menper.</div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:var(--gold)"></div><h3>Cómo comunicarlo</h3></div>
+    <div class="examples">
+      <div class="example"><div class="example-bar"></div><div class="example-inner"><div class="example-tag">Social proof</div><div class="example-text">"¡Más de 3,700 reseñas en Amazon! Polvos de Sulpha — antibiótico tópico OTC para prevenir infecciones en cortes y raspones. Polvo, sin grasa 🩹 #MiBotiquinLatino #ad"</div></div></div>
+      <div class="example"><div class="example-bar"></div><div class="example-inner"><div class="example-tag">Niños activos</div><div class="example-text">"Para ese momento en que los niños llegan con un raspón — Polvos de Sulpha. OTC aprobado, polvo, sin residuo. Tu botiquín lo necesita 💙 #PolvosDeSulpha #ad"</div></div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="si-no">
+      <div class="si-col"><div class="si-head">✅ SÍ DECIR</div><div class="si-items">
+        <div class="si-item">Ayuda a PREVENIR infecciones en cortes menores, raspones y quemaduras superficiales.</div>
+        <div class="si-item">Bacitracina Zinc + Polimixina B — doble cobertura OTC.</div>
+        <div class="si-item">Formato polvo: sin grasa, aplicación limpia.</div>
+        <div class="si-item">+3,700 reseñas en Amazon — el más validado del catálogo.</div>
+      </div></div>
+      <div class="no-col"><div class="no-head">🚫 NO DECIR</div><div class="no-items">
+        <div class="no-item">"Cura infecciones ya establecidas" — previene, no trata profundas.</div>
+        <div class="no-item">"Para heridas profundas o mordeduras" — solo superficiales.</div>
+        <div class="no-item">"Reemplaza atención médica" en heridas serias.</div>
+      </div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:#6366F1"></div><h3>Hashtags</h3></div>
+    <div class="htags"><span class="htag">#PolvosDeSulpha</span><span class="htag">#MiBotiquinLatino</span><span class="htag">#PrimerosAuxilios</span><span class="htag">#FirstAid</span><span class="htag">#TikTokShop</span><span class="htag">#AntibioticoTopico</span><span class="htag">#ad</span></div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:var(--navy)"></div><h3>Copy listo para usar</h3></div>
+    <div class="snippets">
+      <div class="snippet">El polvo de primeros auxilios que no puede faltar en ningún hogar latino 🩹 Polvos de Sulpha — Bacitracina Zinc + Polimixina B para prevenir infecciones. +3,700 reseñas en Amazon. Disponible en Mi Botiquín Latino. #PolvosDeSulpha #ad</div>
+    </div>
+    <div class="legal">OTC de uso externo. Solo heridas menores superficiales. Sigue instrucciones de la etiqueta.</div>
+  </div>
+</div>
+
+
+<!-- ══ 07 · OPAL HAND SANITIZER ══ -->
+<div class="card c-purple" id="opal">
+  <div class="brand-header">
+    <div class="brand-header-left">
+      <div class="brand-eyebrow">Marca 07 · Cosmético</div>
+      <div class="brand-name">Opal<em>Hand Sanitizer</em></div>
+      <div class="brand-tags">
+        <span class="brand-tag">70% Alcohol de caña</span>
+        <span class="brand-tag">Aloe + Ácido Hialurónico</span>
+        <span class="brand-tag">Calmante · Energizante</span>
+        <span class="brand-tag">1.18 oz spray · Pack x2</span>
+      </div>
+    </div>
+    <div class="brand-img-slot">
+      <img src="opal.png" alt="Opal Hand Sanitizer" onerror="this.style.display='none'">
+      <div class="img-placeholder"><div class="ph-icon">🌸</div><div class="ph-label">Sube tu imagen<br>como<br><strong>opal.png</strong></div></div>
+    </div>
+  </div>
+  <div class="brand-body">
+    <div class="meta-strip">
+      <div class="meta-cell"><div class="meta-label">Descripción</div><p>Spray desinfectante de manos premium de viaje. Dos variantes aromáticas: Calmante (Lavanda+Manzanilla+Magnesio) y Energizante (Bergamota+Matcha). Hidrata con Aloe y Ácido Hialurónico.</p></div>
+      <div class="meta-cell"><div class="meta-label">Clasificación</div><p><strong>Cosmético</strong><br>Pack doble — dos sprays de 1.18 oz.</p></div>
+      <div class="meta-cell"><div class="meta-label">Ingredientes clave</div><ul><li>70% Alcohol de Caña de Azúcar</li><li>Aloe Vera · Ácido Hialurónico</li><li>Lavanda + Manzanilla + Magnesio (calmante)</li><li>Bergamota + Matcha (energizante)</li></ul></div>
+    </div>
+    <div class="warn"><div class="warn-icon">⚠️</div><div class="warn-text"><strong>Es cosmético — no OTC</strong>Puedes afirmar que desinfecta (función del 70% alcohol) e hidrata. NO digas "mata el 99.9% de bacterias" — ese es un claim OTC que no tiene.</div></div>
+    <div class="sub-label"><div class="sl-bar" style="background:#3B82F6"></div><h3>Beneficios comunicables</h3></div>
+    <div class="benefits">
+      <div class="benefit"><div class="benefit-title">70% Alcohol → Desinfección eficaz</div><div class="benefit-desc">La concentración de 70% de alcohol de caña de azúcar proporciona desinfección eficaz — la misma que recomiendan los centros de salud.</div></div>
+      <div class="benefit"><div class="benefit-title">Aloe + Ácido Hialurónico → Hidratación</div><div class="benefit-desc">A diferencia de sanitizantes comunes que resecan, Opal hidrata profundamente. Manos suaves sin residuos pegajosos.</div></div>
+      <div class="benefit"><div class="benefit-title">Calmante — Lavanda + Manzanilla</div><div class="benefit-desc">Convierte la desinfección en ritual relajante — lavanda y manzanilla para aliviar el estrés del día. Con magnesio.</div></div>
+      <div class="benefit"><div class="benefit-title">Energizante — Bergamota + Matcha</div><div class="benefit-desc">Bergamota mejora el estado de ánimo; matcha aporta antioxidantes y refresca. Para arrancar el día activa.</div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:var(--gold)"></div><h3>Cómo comunicarlo</h3></div>
+    <div class="examples">
+      <div class="example"><div class="example-bar"></div><div class="example-inner"><div class="example-tag">Diferenciador</div><div class="example-text">"¿Cansada de que el sanitizante te reseque las manos? Opal tiene 70% de alcohol de caña PLUS Aloe y Ácido Hialurónico — desinfecta e hidrata al mismo tiempo 🌸 #OpalHandSanitizer #ad"</div></div></div>
+      <div class="example"><div class="example-bar"></div><div class="example-inner"><div class="example-tag">Self-care</div><div class="example-text">"Convierte la desinfección de manos en un ritual calmante — Lavanda, Manzanilla y Magnesio. Opal disponible en Mi Botiquín Latino 💜 #ad"</div></div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="si-no">
+      <div class="si-col"><div class="si-head">✅ SÍ DECIR</div><div class="si-items">
+        <div class="si-item">Desinfecta eficazmente con 70% alcohol de caña de azúcar.</div>
+        <div class="si-item">Hidrata con Aloe Vera y Ácido Hialurónico — sin resequedad.</div>
+        <div class="si-item">Aromaterapia por estado de ánimo: calmante o energizante.</div>
+        <div class="si-item">Tamaño de viaje — cabe en cualquier bolso.</div>
+      </div></div>
+      <div class="no-col"><div class="no-head">🚫 NO DECIR</div><div class="no-items">
+        <div class="no-item">"Mata el 99.9% de bacterias" — claim OTC que no tiene.</div>
+        <div class="no-item">"Trata o previene enfermedades infecciosas."</div>
+        <div class="no-item">Claims dermatológicos — es cosmético.</div>
+      </div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:#6366F1"></div><h3>Hashtags</h3></div>
+    <div class="htags"><span class="htag">#OpalHandSanitizer</span><span class="htag">#OpalWellness</span><span class="htag">#MiBotiquinLatino</span><span class="htag">#Sanitizante</span><span class="htag">#Aromaterapia</span><span class="htag">#SelfCare</span><span class="htag">#TikTokShop</span><span class="htag">#ad</span></div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:var(--navy)"></div><h3>Copy listo para usar</h3></div>
+    <div class="snippets">
+      <div class="snippet">No más sanitizante que reseca 🙅‍♀️ Opal Hand Sanitizer — 70% alcohol de caña + Aloe + Ácido Hialurónico. Manos limpias e hidratadas. Dos variantes: Calmante (Lavanda+Manzanilla) y Energizante (Bergamota+Matcha) 🌸 Mi Botiquín Latino en TikTok Shop. #OpalHandSanitizer #ad</div>
+    </div>
+    <div class="legal">Cosmético de uso externo. Para uso en manos únicamente.</div>
+  </div>
+</div>
+
+
+<!-- ══ 08 · ZENPAW ══ -->
+<div class="card c-teal" id="zenpaw">
+  <div class="brand-header">
+    <div class="brand-header-left">
+      <div class="brand-eyebrow">Marca 08 · Suplemento Veterinario</div>
+      <div class="brand-name">ZenPaw</div>
+      <div class="brand-tags">
+        <span class="brand-tag">Formulado por veterinarios</span>
+        <span class="brand-tag">300M CFU Probióticos</span>
+        <span class="brand-tag">Omega-3 EPA+DHA</span>
+        <span class="brand-tag">Quercetina + Cúrcuma</span>
+      </div>
+    </div>
+    <div class="brand-img-slot">
+      <img src="zenpaw.png" alt="ZenPaw" onerror="this.style.display='none'">
+      <div class="img-placeholder"><div class="ph-icon">🐾</div><div class="ph-label">Sube tu imagen<br>como<br><strong>zenpaw.png</strong></div></div>
+    </div>
+  </div>
+  <div class="brand-body">
+    <div class="meta-strip">
+      <div class="meta-cell"><div class="meta-label">Descripción</div><p>Masticables suaves (3g/unidad) formulados por veterinarios para el alivio de síntomas de alergias en perros — picazón de piel y orejas, sensibilidades ambientales y dietéticas.</p></div>
+      <div class="meta-cell"><div class="meta-label">Clasificación</div><p><strong>Suplemento para mascotas</strong><br>Formulado por veterinarios. Consultar antes de usar.</p></div>
+      <div class="meta-cell"><div class="meta-label">Ingredientes activos por 3g</div><ul><li>Fish Oil 200mg (EPA 58mg / DHA 39mg)</li><li>Colostrum 15% IgG — 125mg</li><li>EpiCor® Postbiotic — 100mg</li><li>ACV Orgánico — 100mg</li><li>Astragalus Root — 100mg</li><li>Quercetina — 50mg</li><li>Cúrcuma — 50mg</li><li>Probióticos 300M CFU</li></ul></div>
+    </div>
+    <div class="warn"><div class="warn-icon">⚠️</div><div class="warn-text"><strong>Suplemento — no medicamento veterinario</strong>Siempre recomienda consultar al veterinario. Puedes hablar de los ingredientes y sus usos reconocidos, pero no afirmes que trata enfermedades alérgicas diagnosticadas.</div></div>
+    <div class="sub-label"><div class="sl-bar" style="background:#3B82F6"></div><h3>Beneficios por ingrediente</h3></div>
+    <div class="benefits">
+      <div class="benefit"><div class="benefit-title">Quercetina + Cúrcuma → Antihistamínicos naturales</div><div class="benefit-desc">Quercetina es reconocida como antihistamínico natural. Con cúrcuma (antiinflamatoria) apoyan la respuesta ante picazón estacional y ambiental.</div></div>
+      <div class="benefit"><div class="benefit-title">Omega-3 EPA+DHA → Piel y pelaje</div><div class="benefit-desc">200mg de Fish Oil con EPA 58mg y DHA 39mg. Promueven pelaje brillante y piel saludable; alivian picazón cutánea.</div></div>
+      <div class="benefit"><div class="benefit-title">Probióticos 300M CFU → Intestino</div><div class="benefit-desc">4 cepas probióticas para el balance intestinal y absorción de nutrientes — bienestar digestivo canino.</div></div>
+      <div class="benefit"><div class="benefit-title">EpiCor® Postbiotic → Inmunidad</div><div class="benefit-desc">Ingrediente patentado que refuerza las defensas naturales del perro para una respuesta inmunológica saludable.</div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:var(--gold)"></div><h3>Cómo comunicarlo</h3></div>
+    <div class="examples">
+      <div class="example"><div class="example-bar"></div><div class="example-inner"><div class="example-tag">Picazón y alergias</div><div class="example-text">"¿Tu perro no para de rascarse? ZenPaw tiene quercetina y cúrcuma — antihistamínicos naturales — más Omega-3 EPA+DHA para la piel 🐾 Formulado por veterinarios. #ZenPaw #ad"</div></div></div>
+      <div class="example"><div class="example-bar"></div><div class="example-inner"><div class="example-tag">Fórmula completa</div><div class="example-text">"300M UFC de probióticos + Omega-3 + quercetina + EpiCor® — todo en un masticable. ZenPaw para perros con sensibilidades ambientales y dietéticas 🐕 Consulta con tu vet. #ad"</div></div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="si-no">
+      <div class="si-col"><div class="si-head">✅ SÍ DECIR</div><div class="si-items">
+        <div class="si-item">Formulado por veterinarios para apoyar el alivio de picazón estacional en perros.</div>
+        <div class="si-item">Quercetina + cúrcuma — antihistamínicos naturales reconocidos.</div>
+        <div class="si-item">Omega-3 EPA+DHA para piel y pelaje saludables.</div>
+        <div class="si-item">Consulta siempre con tu veterinario antes de usar.</div>
+      </div></div>
+      <div class="no-col"><div class="no-head">🚫 NO DECIR</div><div class="no-items">
+        <div class="no-item">"Trata alergia diagnosticada" — es suplemento.</div>
+        <div class="no-item">"Cura dermatitis o eccema canino."</div>
+        <div class="no-item">"Reemplaza el tratamiento veterinario."</div>
+      </div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:#6366F1"></div><h3>Hashtags</h3></div>
+    <div class="htags"><span class="htag">#ZenPaw</span><span class="htag">#MiBotiquinLatino</span><span class="htag">#DogAllergies</span><span class="htag">#PerroConAlergias</span><span class="htag">#MascotasSanas</span><span class="htag">#TikTokShop</span><span class="htag">#PetWellness</span><span class="htag">#ad</span></div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:var(--navy)"></div><h3>Copy listo para usar</h3></div>
+    <div class="snippets">
+      <div class="snippet">¿Tu perro no para de rascarse? ZenPaw tiene quercetina + cúrcuma (antihistamínicos naturales), Omega-3 EPA+DHA, 300M UFC de probióticos y EpiCor® — todo en un masticable formulado por veterinarios 🐾 Mi Botiquín Latino en TikTok Shop. Consulta con tu vet. #ZenPaw #ad</div>
+    </div>
+    <div class="legal">Suplemento para mascotas. Consulta siempre con tu veterinario. No es medicamento veterinario. Solo para perros.</div>
+  </div>
+</div>
+
+
+<!-- ══ 09 · VINO CARNE Y HIERRO ══ -->
+<div class="card c-wine" id="vino">
+  <div class="brand-header">
+    <div class="brand-header-left">
+      <div class="brand-eyebrow">Marca 09 · Suplemento Dietético</div>
+      <div class="brand-name">Vino Carne<em>y Hierro</em></div>
+      <div class="brand-tags">
+        <span class="brand-tag">Hemoglobina natural</span>
+        <span class="brand-tag">Peptona de Res</span>
+        <span class="brand-tag">16 oz líquido</span>
+      </div>
+    </div>
+    <div class="brand-img-slot">
+      <img src="vino.png" alt="Vino Carne y Hierro" onerror="this.style.display='none'">
+      <div class="img-placeholder"><div class="ph-icon">🍷</div><div class="ph-label">Sube tu imagen<br>como<br><strong>vino.png</strong></div></div>
+    </div>
+  </div>
+  <div class="brand-body">
+    <div class="meta-strip">
+      <div class="meta-cell"><div class="meta-label">Descripción</div><p>Suplemento nutricional líquido (16 oz) con hemoglobina, hierro y nutrientes naturalmente presentes en productos cárnicos.</p></div>
+      <div class="meta-cell"><div class="meta-label">Clasificación</div><p><strong>Suplemento Dietético</strong></p></div>
+      <div class="meta-cell"><div class="meta-label">Ingredientes</div><ul><li>Polvo de Hemoglobina</li><li>Peptona de Res</li><li>Extracto de Naranja</li></ul></div>
+    </div>
+    <div class="warn"><div class="warn-icon">⚠️</div><div class="warn-text"><strong>No afirmes que trata la anemia</strong>Es suplemento nutricional con hierro, no medicamento para déficit clínico. Habla de complementar la nutrición.</div></div>
+    <div class="sub-label"><div class="sl-bar" style="background:#3B82F6"></div><h3>Beneficios comunicables</h3></div>
+    <div class="benefits">
+      <div class="benefit"><div class="benefit-title">Hierro de fuente natural</div><div class="benefit-desc">Hemoglobina y peptona de res son fuentes de hierro hemo, que el cuerpo absorbe con mayor facilidad que el hierro inorgánico.</div></div>
+      <div class="benefit"><div class="benefit-title">Complemento nutricional</div><div class="benefit-desc">Para quienes buscan complementar su alimentación con los nutrientes presentes naturalmente en la carne de res, en formato líquido.</div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="si-no">
+      <div class="si-col"><div class="si-head">✅ SÍ DECIR</div><div class="si-items">
+        <div class="si-item">Suplemento nutricional con hemoglobina y hierro de fuente natural.</div>
+        <div class="si-item">Para complementar la nutrición diaria con nutrientes de la carne de res.</div>
+        <div class="si-item">Un clásico del botiquín latino ahora en TikTok Shop.</div>
+      </div></div>
+      <div class="no-col"><div class="no-head">🚫 NO DECIR</div><div class="no-items">
+        <div class="no-item">"Trata la anemia" — condición médica.</div>
+        <div class="no-item">"Aumenta los glóbulos rojos" — no aprobado.</div>
+        <div class="no-item">Hashtags: #anemia #deficienciaHierro.</div>
+      </div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:#6366F1"></div><h3>Hashtags</h3></div>
+    <div class="htags"><span class="htag">#VinoCarneYHierro</span><span class="htag">#MiBotiquinLatino</span><span class="htag">#HierroNatural</span><span class="htag">#NutricionLatina</span><span class="htag">#TikTokShop</span><span class="htag">#ad</span></div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:var(--navy)"></div><h3>Copy listo para usar</h3></div>
+    <div class="snippets">
+      <div class="snippet">Hierro de fuente natural — Vino Carne y Hierro. Suplemento nutricional líquido con hemoglobina y Peptona de Res para complementar tu nutrición diaria 🍷 Un clásico latino en Mi Botiquín Latino. #VinoCarneYHierro #ad</div>
+    </div>
+    <div class="legal">† No evaluado por la FDA. Incluye #ad.</div>
+  </div>
+</div>
+
+
+<!-- ══ 10 · RÁBANO YODADO ══ -->
+<div class="card c-olive" id="rabano">
+  <div class="brand-header">
+    <div class="brand-header-left">
+      <div class="brand-eyebrow">Marca 10 · Suplemento Dietético</div>
+      <div class="brand-name">Rábano<em>Yodado</em></div>
+      <div class="brand-tags">
+        <span class="brand-tag">Energía · Inmunidad</span>
+        <span class="brand-tag">Tiroides · Digestión</span>
+        <span class="brand-tag">4.6⭐ · 789 reseñas</span>
+        <span class="brand-tag">8 oz · 16 oz</span>
+      </div>
+    </div>
+    <div class="brand-img-slot">
+      <img src="rabano.png" alt="Rábano Yodado" onerror="this.style.display='none'">
+      <div class="img-placeholder"><div class="ph-icon">🌱</div><div class="ph-label">Sube tu imagen<br>como<br><strong>rabano.png</strong></div></div>
+    </div>
+  </div>
+  <div class="brand-body">
+    <div class="meta-strip">
+      <div class="meta-cell"><div class="meta-label">Descripción</div><p>Suplemento líquido con extracto de rábano ionizado, yoduro de potasio y Vitaminas B1, B6 y B12. Fórmula de espectro completo: energía, inmunidad, tiroides y digestión.</p></div>
+      <div class="meta-cell"><div class="meta-label">Clasificación</div><p><strong>Suplemento Dietético</strong><br>4.6⭐ · 789 reseñas Amazon.</p></div>
+      <div class="meta-cell"><div class="meta-label">Ingredientes</div><ul><li>Extracto de Rábano Ionizado</li><li>Yodo (Yoduro de Potasio)</li><li>Tiamina B1 · Vitamina B6 · B12</li></ul></div>
+    </div>
+    <div class="warn"><div class="warn-icon">⚠️</div><div class="warn-text"><strong>"Equilibrio tiroideo" — úsalo con cuidado</strong>El listing oficial lo menciona — puedes usarlo. Pero NO afirmes que trata hipotiroidismo, hipertiroidismo u otras condiciones diagnosticadas.</div></div>
+    <div class="sub-label"><div class="sl-bar" style="background:#3B82F6"></div><h3>Beneficios por ingrediente</h3></div>
+    <div class="benefits">
+      <div class="benefit"><div class="benefit-title">B1 + B12 → Energía que puedes sentir</div><div class="benefit-desc">Apoyan el metabolismo energético diario para sentirte más equilibrado y naturalmente energizado todo el día.</div></div>
+      <div class="benefit"><div class="benefit-title">B6 + B12 → Bienestar inmunológico</div><div class="benefit-desc">Ayudan al cuerpo a mantenerse resistente. Tu opción diaria para el bienestar inmunológico sin mezclas complicadas.</div></div>
+      <div class="benefit"><div class="benefit-title">Yodo → Función tiroidea saludable</div><div class="benefit-desc">El yodo es esencial para la función tiroidea normal. La fórmula apoya el equilibrio hormonal y la producción de energía.</div></div>
+      <div class="benefit"><div class="benefit-title">Extracto de Rábano → Digestión</div><div class="benefit-desc">Nutre la salud intestinal y apoya la absorción de nutrientes — una fórmula para todo el cuerpo.</div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:var(--gold)"></div><h3>Cómo comunicarlo</h3></div>
+    <div class="examples">
+      <div class="example"><div class="example-bar"></div><div class="example-inner"><div class="example-tag">Fórmula completa</div><div class="example-text">"Un suplemento, 4 beneficios: energía, inmunidad, función tiroidea y digestión 🌱 Rábano Yodado con B1, B6, B12 y Yodo. 4.6⭐ con +789 reseñas en Amazon. #MiBotiquinLatino #ad"</div></div></div>
+      <div class="example"><div class="example-bar"></div><div class="example-inner"><div class="example-tag">Tiroides</div><div class="example-text">"El yodo es clave para una función tiroidea saludable. Rábano Yodado — con rábano ionizado y yoduro de potasio para apoyar el equilibrio hormonal 🌿 #RabanoYodado #ad"</div></div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="si-no">
+      <div class="si-col"><div class="si-head">✅ SÍ DECIR</div><div class="si-items">
+        <div class="si-item">Apoya el metabolismo energético con B1 y B12.</div>
+        <div class="si-item">B6 y B12 para el bienestar inmunológico.</div>
+        <div class="si-item">El yodo apoya una función tiroidea saludable.</div>
+        <div class="si-item">Extracto de rábano para salud intestinal y digestiva.</div>
+      </div></div>
+      <div class="no-col"><div class="no-head">🚫 NO DECIR</div><div class="no-items">
+        <div class="no-item">"Trata el hipotiroidismo / hipertiroidismo."</div>
+        <div class="no-item">"Cura resfriados o gripe" — no es medicamento.</div>
+        <div class="no-item">Hashtags: #hipotiroidismo #tiroiditis #gripe.</div>
+      </div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:#6366F1"></div><h3>Hashtags</h3></div>
+    <div class="htags"><span class="htag">#RabanoYodado</span><span class="htag">#MiBotiquinLatino</span><span class="htag">#SaludTiroidea</span><span class="htag">#EnergiaNatural</span><span class="htag">#SaludDigestiva</span><span class="htag">#TikTokShop</span><span class="htag">#ad</span></div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:var(--navy)"></div><h3>Copy listo para usar</h3></div>
+    <div class="snippets">
+      <div class="snippet">Un suplemento, 4 beneficios — energía, inmunidad, función tiroidea y digestión 🌱 Rábano Yodado con B1, B6, B12 y Yodo. 4.6⭐ · +789 reseñas. Disponible en Mi Botiquín Latino en TikTok Shop. #RabanoYodado #ad</div>
+    </div>
+    <div class="legal">† No evaluado por la FDA. Incluye #ad.</div>
+  </div>
+</div>
+
+
+<!-- ══ 11 · FITINA ══ -->
+<div class="card c-indigo" id="fitina">
+  <div class="brand-header">
+    <div class="brand-header-left">
+      <div class="brand-eyebrow">Marca 11 · Suplemento Dietético</div>
+      <div class="brand-name">Fitina</div>
+      <div class="brand-tags">
+        <span class="brand-tag">Tiamina · B6</span>
+        <span class="brand-tag">Calcio · Fósforo · Magnesio</span>
+        <span class="brand-tag">60 y 100 tabletas</span>
+      </div>
+    </div>
+    <div class="brand-img-slot">
+      <img src="fitina.png" alt="Fitina" onerror="this.style.display='none'">
+      <div class="img-placeholder"><div class="ph-icon">🧠</div><div class="ph-label">Sube tu imagen<br>como<br><strong>fitina.png</strong></div></div>
+    </div>
+  </div>
+  <div class="brand-body">
+    <div class="meta-strip">
+      <div class="meta-cell"><div class="meta-label">Descripción</div><p>Tabletas con vitaminas del complejo B y minerales. Apoyo al bienestar del sistema nervioso. Clásico del botiquín latino.</p></div>
+      <div class="meta-cell"><div class="meta-label">Clasificación</div><p><strong>Suplemento Dietético</strong></p></div>
+      <div class="meta-cell"><div class="meta-label">Ingredientes</div><ul><li>Tiamina (B1) · Vitamina B6</li><li>Calcio · Fósforo · Magnesio</li><li>Ácido Glutónico</li></ul></div>
+    </div>
+    <div class="warn"><div class="warn-icon">⚠️</div><div class="warn-text"><strong>Sin claims cognitivos clínicos</strong>Fitina tiene vitaminas B que apoyan el sistema nervioso. No afirmes que previene Alzheimer, demencia ni que mejora el coeficiente intelectual.</div></div>
+    <div class="sub-label"><div class="sl-bar" style="background:#3B82F6"></div><h3>Beneficios comunicables</h3></div>
+    <div class="benefits">
+      <div class="benefit"><div class="benefit-title">Tiamina + B6 → Sistema nervioso</div><div class="benefit-desc">Las vitaminas B1 y B6 contribuyen al funcionamiento normal del sistema nervioso — base del bienestar cognitivo.</div></div>
+      <div class="benefit"><div class="benefit-title">Calcio + Fósforo + Magnesio</div><div class="benefit-desc">Tres minerales clave para el bienestar general del organismo, incluyendo salud ósea y muscular.</div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="si-no">
+      <div class="si-col"><div class="si-head">✅ SÍ DECIR</div><div class="si-items">
+        <div class="si-item">B1 y B6 contribuyen al funcionamiento normal del sistema nervioso.</div>
+        <div class="si-item">Con Calcio, Fósforo y Magnesio para el bienestar general.</div>
+      </div></div>
+      <div class="no-col"><div class="no-head">🚫 NO DECIR</div><div class="no-items">
+        <div class="no-item">"Mejora la inteligencia" — no aprobado.</div>
+        <div class="no-item">"Previene Alzheimer o demencia."</div>
+        <div class="no-item">"Mejora la concentración clínicamente."</div>
+      </div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:#6366F1"></div><h3>Hashtags</h3></div>
+    <div class="htags"><span class="htag">#Fitina</span><span class="htag">#MiBotiquinLatino</span><span class="htag">#VitaminasB</span><span class="htag">#SistemaNervioso</span><span class="htag">#TikTokShop</span><span class="htag">#ad</span></div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:var(--navy)"></div><h3>Copy listo para usar</h3></div>
+    <div class="snippets">
+      <div class="snippet">Tiamina, B6, Calcio, Fósforo y Magnesio — vitaminas del complejo B y minerales para el bienestar del sistema nervioso 🧠 Fitina, el clásico del botiquín latino. Disponible en Mi Botiquín Latino en TikTok Shop. #Fitina #ad</div>
+    </div>
+    <div class="legal">† No evaluado por la FDA. Incluye #ad.</div>
+  </div>
+</div>
+
+
+<!-- ══ 12 · RUTASCORBINA ══ -->
+<div class="card c-ember" id="rutascorbin">
+  <div class="brand-header">
+    <div class="brand-header-left">
+      <div class="brand-eyebrow">Marca 12 · Suplemento Dietético</div>
+      <div class="brand-name">Rutascorbina</div>
+      <div class="brand-tags">
+        <span class="brand-tag">Vitamina C</span>
+        <span class="brand-tag">Rutina (flavonoide)</span>
+        <span class="brand-tag">50 tabletas</span>
+      </div>
+    </div>
+    <div class="brand-img-slot">
+      <img src="rutascorbin.png" alt="Rutascorbina" onerror="this.style.display='none'">
+      <div class="img-placeholder"><div class="ph-icon">🍊</div><div class="ph-label">Sube tu imagen<br>como<br><strong>rutascorbin.png</strong></div></div>
+    </div>
+  </div>
+  <div class="brand-body">
+    <div class="meta-strip">
+      <div class="meta-cell"><div class="meta-label">Descripción</div><p>Tabletas con Vitamina C y Rutina (flavonoide natural) para el apoyo del sistema capilar saludable (capilares sanguíneos). 50 tabletas.</p></div>
+      <div class="meta-cell"><div class="meta-label">Clasificación</div><p><strong>Suplemento Dietético</strong></p></div>
+      <div class="meta-cell"><div class="meta-label">Ingredientes</div><ul><li>Vitamina C (Ácido Ascórbico)</li><li>Rutina (Rutin — flavonoide)</li></ul></div>
+    </div>
+    <div class="warn"><div class="warn-icon">⚠️</div><div class="warn-text"><strong>"Capilar" = capilares sanguíneos, NO el cabello</strong>Rutascorbina apoya los capilares sanguíneos (vasos diminutos), no el cabello. No lo presentes como suplemento capilar de pelo.</div></div>
+    <div class="sub-label"><div class="sl-bar" style="background:#3B82F6"></div><h3>Beneficios comunicables</h3></div>
+    <div class="benefits">
+      <div class="benefit"><div class="benefit-title">Vitamina C → Inmunidad + antioxidante</div><div class="benefit-desc">Apoya el sistema inmunológico, proporciona soporte antioxidante y contribuye a la formación normal de colágeno.</div></div>
+      <div class="benefit"><div class="benefit-title">Rutina → Salud de capilares sanguíneos</div><div class="benefit-desc">Flavonoide natural que ayuda a mantener la salud de los capilares sanguíneos — vasos microscópicos esenciales para la circulación.</div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="si-no">
+      <div class="si-col"><div class="si-head">✅ SÍ DECIR</div><div class="si-items">
+        <div class="si-item">Vitamina C para apoyar el sistema inmunológico y soporte antioxidante.</div>
+        <div class="si-item">Rutina como flavonoide para la salud de los capilares sanguíneos.</div>
+      </div></div>
+      <div class="no-col"><div class="no-head">🚫 NO DECIR</div><div class="no-items">
+        <div class="no-item">"Para el cabello" — capilares = vasos sanguíneos, no pelo.</div>
+        <div class="no-item">"Trata varices o venas" — no es medicamento vascular.</div>
+        <div class="no-item">"Elimina moretones" — afirmación terapéutica no aprobada.</div>
+      </div></div>
+    </div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:#6366F1"></div><h3>Hashtags</h3></div>
+    <div class="htags"><span class="htag">#Rutascorbina</span><span class="htag">#MiBotiquinLatino</span><span class="htag">#VitaminaC</span><span class="htag">#Antioxidante</span><span class="htag">#TikTokShop</span><span class="htag">#ad</span></div>
+    <div class="hr"></div>
+    <div class="sub-label"><div class="sl-bar" style="background:var(--navy)"></div><h3>Copy listo para usar</h3></div>
+    <div class="snippets">
+      <div class="snippet">Vitamina C + Rutina 🍊 Soporte antioxidante e inmunológico, más Rutina para la salud de los capilares sanguíneos. Rutascorbina — dos ingredientes simples con propósito claro. Mi Botiquín Latino en TikTok Shop. #Rutascorbina #ad</div>
+    </div>
+    <div class="legal">† No evaluado por la FDA. Incluye #ad.</div>
+  </div>
+</div>
+
+
+<!-- ══════════════ CLOSING ══════════════ -->
+<div class="card closing">
+  <div class="closing-logo">
+    <!-- IMAGE FILE: logo-white.png -->
+    <img src="logo-white.png" alt="Mi Botiquín Latino" onerror="this.style.display='none'">
+  </div>
+  <h2>¿Dudas antes de publicar?</h2>
+  <p>Contacta a tu manager de afiliados antes de publicar contenido del que no estés seguro/a. Es mejor preguntar que eliminar un video.</p>
+  <div class="closing-pills">
+    <span class="closing-pill">@mibotiquinlatino</span>
+    <span class="closing-pill">Menper Distributors · Miami, FL</span>
+    <span class="closing-pill">TikTok Shop</span>
+  </div>
+  <div class="closing-note">Documento confidencial — Uso interno afiliados · Unlimitify para Menper Group · 2025</div>
+</div>
+
+</div><!-- /doc -->
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+</script>
+</body>
+</html>
